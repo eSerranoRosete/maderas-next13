@@ -13,3 +13,52 @@ export interface IFRequestBody {
   };
   targetEmail: string;
 }
+
+export interface IFUserDocument {
+  id: string;
+  type: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  phone: string;
+  organization: string;
+  avatar: {
+    id: string;
+    filename: string;
+    mimeType: string;
+    filesize: number;
+    width: number;
+    height: number;
+    createdAt: string;
+    updatedAt: string;
+    url: string;
+  };
+  cover: {
+    id: string;
+    filename: string;
+    mimeType: string;
+    filesize: number;
+    width: number;
+    height: number;
+    createdAt: string;
+    updatedAt: string;
+    url: string;
+  };
+  slider: {
+    title: string;
+    items: {
+      image: {
+        id: string;
+        filename: string;
+        mimeType: string;
+        filesize: number;
+        width: number;
+        height: number;
+        createdAt: string;
+        updatedAt: string;
+        url: string;
+      };
+      id: string;
+    }[];
+  };
+}

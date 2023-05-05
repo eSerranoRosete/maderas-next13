@@ -33,7 +33,7 @@ export const useAppState = create<AppState>((set) => ({
   term: 20,
   location: locations[0].name,
   landPrice: locations[0].landPrice,
-  payment: 0,
+  payment: locations[0].options[0],
   leadName: "",
   leadEmail: "",
   leadPhone: "",

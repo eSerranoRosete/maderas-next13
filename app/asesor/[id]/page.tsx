@@ -1,4 +1,5 @@
 import { Form } from "@/components/Form";
+import { IFUserDocument } from "@/types/appTypes";
 import { API_ENDPOINT } from "@/utils/settings";
 
 async function getData(id: string) {
@@ -13,7 +14,7 @@ interface IFParams {
   params: { id: string };
 }
 export default async function AsesorPage({ params }: IFParams) {
-  const data = await getData(params.id);
+  const data = (await getData(params.id)) as IFUserDocument;
 
   return (
     <Form
