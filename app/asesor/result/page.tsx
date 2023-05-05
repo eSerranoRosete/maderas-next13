@@ -7,7 +7,7 @@ import React from "react";
 export default function AsesorResult() {
   const resultData = useAppState((state) => state.resultData);
 
-  if (!resultData) throw new Error("No result data found.");
+  if (!resultData) return <>No Result Data Found</>;
 
   return <Result resultData={resultData} />;
 }
