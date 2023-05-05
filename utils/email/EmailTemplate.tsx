@@ -1,13 +1,8 @@
 import React from "react";
-import { type IFRequestBody } from "../../pages/api/mail";
+import { type IFRequestBody } from "@/types/appTypes";
 import { formatCurrency } from "../computeResult";
 
-export const EmailTemplate = ({
-  lead,
-  inputs,
-  locationName,
-  resultData,
-}: IFRequestBody) => {
+export const EmailTemplate = ({ lead, inputs, resultData }: IFRequestBody) => {
   return (
     <div>
       <h2>Una nueva persona realizó una cotización</h2>
@@ -16,7 +11,7 @@ export const EmailTemplate = ({
       <div>Email: {lead.email}</div>
       <div>Teléfono: {lead.phone}</div>
       <br />
-      <div>Desarrollo: {locationName}</div>
+      <div>Desarrollo: {inputs.location}</div>
       <div>
         <b className="mr-2">Superficie:</b>
         <span className="float-right">{inputs.area} m2</span>
